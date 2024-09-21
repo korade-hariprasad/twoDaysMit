@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "515389239706",
+    "project_id": "twod-2ea1f",
+    "storage_bucket": "twod-2ea1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515389239706:android:b5539b1ea7323f9f568a23",
+        "android_client_info": {
+          "package_name": "hari.personal.twod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAhYlkDrxgpvNLyJJb__7ExHPfmr9dyrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

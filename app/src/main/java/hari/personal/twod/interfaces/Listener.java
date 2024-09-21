@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import hari.personal.twod.models.PostItemModel;
 
 public interface Listener {
-    public void onApiFetchSuccessful(ArrayList<PostItemModel> list);
-    void onApiFetchError(String errorMessage);
+    void onListFetchSuccessful(ArrayList<PostItemModel> list);
+    void onError(String errorMessage);
+    void onSuccess(String successMessage);
 }

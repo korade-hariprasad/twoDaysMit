@@ -32,14 +32,26 @@ public class MainActivity extends AppCompatActivity {
         fragmentContainer = findViewById(R.id.fragmentContainer);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
 
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Home");
+
         loadFragment(new HomeFragment());
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.action_home) loadFragment(new HomeFragment());
-                if(item.getItemId()==R.id.action_add) loadFragment(new AddFragment());
-                if(item.getItemId()==R.id.action_api) loadFragment(new ApiFragment());
+                if(item.getItemId()==R.id.action_home) {
+                    toolbar.setTitle("Home");
+                    loadFragment(new HomeFragment());
+                }
+                if(item.getItemId()==R.id.action_add){
+                    toolbar.setTitle("Add Post");
+                    loadFragment(new AddFragment());
+                }
+                if(item.getItemId()==R.id.action_api){
+                    toolbar.setTitle("Api Posts");
+                    loadFragment(new ApiFragment());
+                }
                 return true;
             }
         });

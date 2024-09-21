@@ -44,21 +44,21 @@ public class ApiHelper {
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                                 PostItemModel item = new PostItemModel();
                                 item.setId(String.valueOf(jsonObject.getInt("id")));
-                                item.setId(jsonObject.getString("title"));
-                                item.setId(jsonObject.getString("body"));
+                                item.setTitle(jsonObject.getString("title"));
+                                item.setBody(jsonObject.getString("body"));
                                 list.add(item);
+                                //Log.d("myTag", "Title\n"+item.getTitle());
                             }
-                            Log.d("myTag", "list\n"+list.size());
-                            listener.onApiFetchSuccessful(list);
                         } catch (JSONException e) {
                             Log.d("myTag", e.getMessage(), e);
-                            listener.onApiFetchError("Something went wrong");
+                            listener.onError("Something went wrong");
                         }
+                        listener.onListFetchSuccessful(list);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                listener.onApiFetchError("Something went wrong");
+                listener.onError("Something went wrong");
             }
         });
 
