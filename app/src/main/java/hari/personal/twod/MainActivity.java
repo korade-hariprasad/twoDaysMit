@@ -9,18 +9,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-
 import hari.personal.twod.fragments.AddFragment;
 import hari.personal.twod.fragments.ApiFragment;
 import hari.personal.twod.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    //declaration
     Toolbar toolbar;
     FrameLayout fragmentContainer;
     BottomNavigationView bottomNavigationView;
@@ -30,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //init
         toolbar = findViewById(R.id.toolbar);
         fragmentContainer = findViewById(R.id.fragmentContainer);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
